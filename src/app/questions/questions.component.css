@@ -1,0 +1,18 @@
+.quiz-body{
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+li{
+    cursor: pointer;
+    list-style-type: none;
+    margin : 10px 0;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+li:hover{
+    border: 1px black solid;
+}
+

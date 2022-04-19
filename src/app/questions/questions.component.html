@@ -1,0 +1,32 @@
+<ng-container *ngIf="testCompleted == false">
+    <div class="quiz-body container-fluid">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between">
+                <img src="./../../assets/images/wipro_logo.png" alt="" height="80px" width="80px">
+                <h5 class="card-header">TypeScript Quiz! <br> Welcome {{_user}}!</h5>
+            </div>
+            <div class="card-body">
+                <h3 class="question-text">{{questions[current_question].questionText}}</h3>
+                <ol class="options" *ngFor="let option of questions[current_question].options">
+                    <li (click)="handleclick(option)">{{option.text}}</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+
+<ng-container *ngIf="testCompleted == true">
+    <div class="quiz-body container-fluid">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between">
+                <img src="./../../assets/images/wipro_logo.png" alt="" height="80px" width="80px">
+                <h5 class="card-header">TypeScript Quiz! <br> Welcome {{_user}}!</h5>
+            </div>
+            <div class="card-body">
+                <h3> {{_user}}, your result is : {{score}}</h3>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
