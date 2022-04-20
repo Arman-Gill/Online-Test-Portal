@@ -16,6 +16,7 @@ export class QuestionsComponent implements OnInit {
   public score : number = 0;
   public testCompleted : boolean = false;
   public interval$ :any;
+  progress : string = "0%";
   counter = 60;
 
   constructor(private service: ReadingQuestionsService) { }
@@ -38,6 +39,7 @@ export class QuestionsComponent implements OnInit {
     else{
       
       this.current_question++;
+      this.updateProgressBar()
       this.resetTimer();
       
     }
@@ -80,5 +82,13 @@ export class QuestionsComponent implements OnInit {
     this.startTimer();
 
   }
+
+  updateProgressBar(){
+    this.progress = (((this.current_question+1)/(this.questions.length)) * 100).toString()
+    this.progress += '%';
+  }
+
+
+
 
 }

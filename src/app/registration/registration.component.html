@@ -1,9 +1,27 @@
 
-<h1 style="text-align: center;">Welcome to the TypeScript online test.</h1>
+		<div class="main">
+			<div class="top">
+				<form>
+                    <h1 style="text-align: center;">TypeScript Quiz</h1>
+					<input #name class="text" type="text" name="Name" placeholder="Name" required="">
+					<input #email class="text email" type="email" name="email" placeholder="Email" required="">
+					<div class="wthree-text">
+						<label class="anim">
+							<input type="checkbox" class="checkbox" required="">
+							<span style="margin-left: 5px;">I am not a robot.</span>
+						</label>
+						<div class="clear"> </div>
+					</div>
+					<input (click)="registerUser()" routerLink="/questions" type="submit" value="REGISTER">
+				</form>
 
-<form class="registration-form">
+<!-- <form class="registration-form">
+
+    <h1 style="text-align: center;">Welcome to the TypeScript online test.</h1>
+
     <label>Enter a valid email id : </label>
     <input #email type="text" placeholder="email-id"  name="email">
-</form>
 
-<button (click)="registerUser()" routerLink="/questions" class="register-button">Register</button>
+    <button (click)="registerUser()" routerLink="/questions" class="register-button">Register</button>
+</form> -->
+
